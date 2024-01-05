@@ -50,7 +50,7 @@ tasks.register('CUSTOM_BUILD_AND_TEST_AND_SEND_TG_MSG') {
     dependsOn(tasks)
     doLast {
         exec {
-            commandLine 'java', '-DconfigFile=C:\\Test\\AQAProjects\\MyProjectForAQAPosition\\src\\notifications\\telegram.json', '-jar', 'C:\\Test\\AQAProjects\\MyProjectForAQAPosition\\src\\notifications\\allure-notifications-4.6.1.jar'
+            commandLine 'java', '-DconfigFile=C:\\Test\\AQAProjects\\ParametrizedTestsAndReporting\\src\\notifications\\telegram.json', '-jar', 'C:\\Test\\AQAProjects\\ParametrizedTestsAndReporting\\src\\notifications\\allure-notifications-4.6.1.jar'
         }
     }
 }

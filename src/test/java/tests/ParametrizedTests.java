@@ -5,6 +5,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -47,7 +48,6 @@ public class ParametrizedTests extends TestBase {
             "charles, 40"})
     @ParameterizedTest
     void TestWithCsvSource(String name, int age) {
-        Configuration.browser = "edge";
         open("https://github.com/");
         System.out.println(name + "   " + age);
     }
@@ -67,6 +67,21 @@ public class ParametrizedTests extends TestBase {
         System.out.println(browser);
         assert (2 > 3);
     }
+
+    @Test
+    public void testUnknown() {
+        open("https://github.com/");
+        // Assume some test logic that doesn't explicitly indicate pass/fail
+        // For example, interacting with the web page without assertions
+    }
+
+    @Test
+    public void testBroken() {
+        open("https://google.com/");
+        // Simulate a broken test by throwing an exception
+        throw new RuntimeException("Simulated broken test");
+    }
+
 
     @Tag("Smoke")
     @Feature("Категории товаров")
