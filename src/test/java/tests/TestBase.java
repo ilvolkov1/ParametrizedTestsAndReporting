@@ -11,7 +11,7 @@ public class TestBase {
     // Настройка Selenide и WebDriver перед запуском тестов
     @BeforeAll
     static void beforeAll() {
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.browser = "chrome";
         Configuration.timeout = 7000;
         SelenideLogger.addListener("allure", new AllureSelenide());
