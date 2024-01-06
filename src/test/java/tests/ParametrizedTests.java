@@ -39,6 +39,7 @@ public class ParametrizedTests extends TestBase {
     // Метод теста. В этом случае просто выводит в консоль аргументы
     void methodSourceExampleTest(String firstArg, List<Integer> secondArg) {
         System.out.println(firstArg + " and list: " + secondArg);
+        assert (2 > 3);
     }
 
 
@@ -65,7 +66,7 @@ public class ParametrizedTests extends TestBase {
         Configuration.browser = browser.toString();
         open("https://github.com/");
         System.out.println(browser);
-     //   assert (2 > 3);
+        assert (2 > 3);
     }
 
     @Test
