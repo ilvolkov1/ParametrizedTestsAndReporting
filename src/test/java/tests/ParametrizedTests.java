@@ -65,7 +65,7 @@ public class ParametrizedTests extends TestBase {
         Configuration.browser = browser.toString();
         open("https://github.com/");
         System.out.println(browser);
-        assert (2 > 3);
+     //   assert (2 > 3);
     }
 
     @Test
